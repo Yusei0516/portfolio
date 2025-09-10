@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>道坂裕世 | Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,20 +20,39 @@
         </header>
 
         <section id="about">
-            <h1>道坂裕世のポートフォリオ</h1>
+            <header class="site-header">
+                <h1>道坂裕世のポートフォリオ</h1>
+                <div class="contact-icons">
+                    <a href="https://github.com/Yusei0516" target="_blank">
+                        <i class="devicon-github-original"></i>
+                    </a>
+                    <a href="https://qiita.com/yusei0516" target="_blank">
+                        <img src="https://cdn.qiita.com/assets/qiita-logo-20220906-6dffb6a6f92d07d04a9cc5ab07df1b79.svg"  
+                            alt="Qiita" width="28" height="28">
+                    </a>
+                    <a href="https://twitter.com/YOUR_ID" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 1200 1227" fill="currentColor">
+                            <path d="M714.163 519.284 1160.89 0H1050.9L667.137 442.568 370.584 0H0l468.993 681.821L0 1226.37h110.988l405.53-482.349L829.416 1226.37H1200L714.163 519.284Z"/>
+                        </svg>
+                    </a>
+                </div>
+            </header>
             <p>第二新卒 / バックエンド・インフラ志望。Flask でのチャットアプリ開発と、AWS
                 でのインフラ構築をチーム開発で担当しました。</p>
         </section>
 
         <section id="skills">
             <h2>Skills</h2>
-            <ul>
-                <li>言語：Python, JavaScript</li>
-                <li>フレームワーク：Flask, Django(学習中)</li>
-                <li>DB：MySQL</li>
-                <li>インフラ：Docker, AWS</li>
-                <li>その他：Git/GitHub</li>
-            </ul>
+            <div class="skills">            
+                <i class="devicon-python-plain"></i>
+                <i class="devicon-javascript-plain"></i>
+                <i class="devicon-django-plain-wordmark"></i>
+                <i class="devicon-flask-original"></i>
+                <i class="devicon-mysql-plain-wordmark"></i>
+                <i class="devicon-docker-plain-wordmark"></i>
+                <i class="devicon-amazonwebservices-plain-wordmark"></i>
+                <i class="devicon-github-original"></i>
+            </div>
         </section>
 
         <section id="projects">
@@ -45,7 +65,7 @@
                     <div class="chips">
                         <span class="chip">Flask</span><span class="chip">MySQL</span><span class="chip">Docker</span>
                     </div>
-                    <p><a href="https://github.com/Yusei0516/ChatApp" target="_blank">GitHubリポジトリ</a></p>
+                    <p><a href="https://github.com/Yusei0516/ChatApp" target="_blank"><i class="devicon-github-original"></i> ChatApp</a></p>
                     
                 </div>
 
@@ -56,7 +76,7 @@
                     <div class="chips">
                         <span class="chip">AWS</span><span class="chip">Docker</span>
                     </div>
-                    <p><a href="https://github.com/Yusei0516/HackNow" target="_blank">GitHubリポジトリ</a></p>
+                    <p><a href="https://github.com/Yusei0516/HackNow" target="_blank"><i class="devicon-github-original"></i> HackNow</a></p>
                 </div>
             </div>
         </section>
