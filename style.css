@@ -29,3 +29,40 @@ code,pre{background:#12162a;border:1px solid var(--muted);padding:3px 6px;border
 .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
 .chip{font-size:12px;padding:6px 8px;border-radius:999px;background:#1b2040;border:1px solid var(--muted)}
 footer{color:var(--sub);font-size:13px;text-align:center;margin:22px 0}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 48px;
+}
+.skills i {
+    transition: transform 0.2s;
+}
+.skills i:hover {
+    transform: scale(1.2);
+}
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.site-header h1 {
+    font-size: 28px;
+    margin: 0;
+}
+.contact-icons a {
+    margin-left: 12px;
+    font-size: 28px;
+    color: var(--text);
+}
+.contact-icons a:hover {
+    color: var(--accent);
+}
+.contact-icons img {
+    width: 28px;
+    height: 28px;
+    margin-left: 12px;
+    vertical-align: middle;
+}
