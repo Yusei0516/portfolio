@@ -53,19 +53,61 @@ footer{color:var(--sub);font-size:13px;text-align:center;margin:22px 0}
     margin: 0;
 }
 .contact-icons a {
-    margin-left: 12px;
-    font-size: 28px;
-    color: var(--text);
+    display: flex;
+    color: #fff;
 }
 .contact-icons a:hover {
     color: var(--accent);
 }
-.contact-icons img {
+.contact-icons {
+    display: flex;
+    gap: 12px;
+    align-items: center; 
+}
+.contact-icons img, 
+.contact-icons i,
+.contact-icons svg{
     width: 28px;
     height: 28px;
     margin-left: 12px;
     vertical-align: middle;
+    transition: transform 0.2s;
 }
-.contact-icons img:hover {
-  filter: brightness(1.2);
+.contact-icons i { color: currentColor; }
+
+.si {
+  display:inline-block;
+  width:28px;
+  height:28px;
+  background-color: currentColor; /* 白 */
+  transition: color .2s, transform .2s;
+  -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat;
+  -webkit-mask-position:center;  mask-position:center;
+  -webkit-mask-size:contain;     mask-size:contain;
+}
+
+.si:hover {
+  background-color: var(--accent); /* ホバー時に統一色 */
+  transform: scale(1.2);
+}
+
+.si.github {
+  -webkit-mask-image:url("https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg");
+          mask-image:url("https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg");
+}
+/* .si.x{
+  -webkit-mask-image:url("images/X.svg");
+          mask-image:url("images/X.svg");
+} */
+/* .si.qiita{
+  -webkit-mask-image:url("./images/qiita.SVG");
+          mask-image:url("./images/qiita.SVG");
+} */
+.si.qiita{
+  -webkit-mask-image:url("https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/qiita.svg");
+          mask-image:url("https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/qiita.svg");
+}
+.si.x{
+  -webkit-mask-image:url("https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/x.svg");
+          mask-image:url("https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/x.svg");
 }
