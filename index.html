@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>道坂裕世 | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div><strong>道坂 裕世</strong> / Backend & Infra</div>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <section id="about">
+            <h1>道坂裕世のポートフォリオ</h1>
+            <p>第二新卒 / バックエンド・インフラ志望。Flask でのチャットアプリ開発と、AWS
+                でのインフラ構築をチーム開発で担当しました。</p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>言語：Python, JavaScript</li>
+                <li>フレームワーク：Flask, Django(学習中)</li>
+                <li>DB：MySQL</li>
+                <li>インフラ：Docker, AWS</li>
+                <li>その他：Git/GitHub</li>
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects">
+                <div class="card">
+                    <h3>はぎゅっとチャット（バックエンド, チーム開発）</h3>
+                    <div class="meta">担当: ログイン、個別メッセージ、グループ作成/招待/削除/メッセージ</div>
+                    <p>オープン/グループ/個別チャットを備えたWebチャット。</p>
+                    <div class="chips">
+                        <span class="chip">Flask</span><span class="chip">MySQL</span><span class="chip">Docker</span>
+                    </div>
+                    <p><a href="https://github.com/Yusei0516/ChatApp" target="_blank">GitHubリポジトリ</a></p>
+                    
+                </div>
+
+                <div class="card">
+                    <h3>HackNow（インフラ, チーム開発）</h3>
+                    <div class="meta">担当: Docker環境構築, AWS環境構築</div>
+                    <p>Web3層構成。ローカルは Docker Compose で再現。構成図・手順をREADMEに整理。</p>
+                    <div class="chips">
+                        <span class="chip">AWS</span><span class="chip">Docker</span>
+                    </div>
+                    <p><a href="https://github.com/Yusei0516/HackNow" target="_blank">GitHubリポジトリ</a></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>GitHub: <a href="https://github.com/Yusei0516" target="_blank">https://github.com/Yusei0516</a></p>
+            <p>Qiita: <a href="https://qiita.com/yusei0516" target="_blank">https://qiita.com/yusei0516</a></p>
+        </section>
+    
+        <footer>© <span id="y"></span> Yusei Dosaka</footer>
+    </div>
+    <script>document.getElementById('y').textContent=new Data().getFullYear()</script>
+</body>
+</html>
