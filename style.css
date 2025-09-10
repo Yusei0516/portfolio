@@ -66,3 +66,6 @@ footer{color:var(--sub);font-size:13px;text-align:center;margin:22px 0}
     margin-left: 12px;
     vertical-align: middle;
 }
+.contact-icons img:hover {
+  filter: brightness(1.2);
+}
