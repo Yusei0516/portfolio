@@ -1,0 +1,31 @@
+/* ベース */
+:root{
+  --bg:#0f1220; --card:#161a2b; --text:#e8ecff; --sub:#a9b0d5;
+  --accent:#7c9cff; --muted:#2a2f47; --radius:14px; --max:900px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,"Noto Sans JP",sans-serif;line-height:1.7}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* レイアウト */
+.wrap{max-width:var(--max);margin:auto;padding:24px}
+header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:16px}
+nav{display:flex;gap:10px;flex-wrap:wrap}
+nav a{padding:8px 12px;border:1px solid var(--muted);border-radius:999px;background:#14182b}
+
+/* セクション */
+section{background:var(--card);border:1px solid var(--muted);border-radius:var(--radius);padding:18px;margin:18px 0}
+h1{font-size:clamp(22px,3.4vw,34px);margin:4px 0 12px}
+h2{font-size:clamp(18px,2.4vw,24px);margin:0 0 8px}
+p,li{color:var(--sub)}
+ul{padding-left:18px}
+code,pre{background:#12162a;border:1px solid var(--muted);padding:3px 6px;border-radius:8px}
+
+/* Projectsカード */
+.projects{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:#14182b;border:1px solid var(--muted);border-radius:12px;padding:14px}
+.meta{font-size:12px;color:var(--sub);margin:6px 0 10px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.chip{font-size:12px;padding:6px 8px;border-radius:999px;background:#1b2040;border:1px solid var(--muted)}
+footer{color:var(--sub);font-size:13px;text-align:center;margin:22px 0}
