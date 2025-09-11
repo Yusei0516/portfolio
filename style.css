@@ -52,48 +52,26 @@ footer{color:var(--sub);font-size:13px;text-align:center;margin:22px 0}
     font-size: 28px;
     margin: 0;
 }
-.contact-icons a {
-    display: flex;
-    color: #fff;
-}
-.contact-icons a:hover {
-    color: var(--accent);
-}
-.contact-icons {
-    display: flex;
-    gap: 12px;
-    align-items: center; 
-}
-.contact-icons img, 
-.contact-icons i,
-.contact-icons svg{
-    width: 28px;
-    height: 28px;
-    margin-left: 12px;
-    vertical-align: middle;
-    transition: transform 0.2s;
-}
-.contact-icons i { color: currentColor; }
 
 .si {
-  display:inline-block;
-  width:28px;
-  height:28px;
-  background-color: currentColor; /* 白 */
-  transition: color .2s, transform .2s;
-  -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat;
-  -webkit-mask-position:center;  mask-position:center;
-  -webkit-mask-size:contain;     mask-size:contain;
+    display:inline-block;
+    width:28px;
+    height:28px;
+    background-color: currentColor; /* 白 */
+    transition: color .2s, transform .2s;
+    -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat;
+    -webkit-mask-position:center;  mask-position:center;
+    -webkit-mask-size:contain;     mask-size:contain;
 }
 
 .si:hover {
-  background-color: var(--accent); /* ホバー時に統一色 */
-  transform: scale(1.2);
+    background-color: var(--accent); /* ホバー時に統一色 */
+    transform: scale(1.2);
 }
 
 .si.github {
-  -webkit-mask-image:url("https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg");
-          mask-image:url("https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg");
+    -webkit-mask-image:url("https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg");
+            mask-image:url("https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg");
 }
 /* .si.x{
   -webkit-mask-image:url("images/X.svg");
@@ -103,11 +81,218 @@ footer{color:var(--sub);font-size:13px;text-align:center;margin:22px 0}
   -webkit-mask-image:url("./images/qiita.SVG");
           mask-image:url("./images/qiita.SVG");
 } */
-.si.qiita{
-  -webkit-mask-image:url("https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/qiita.svg");
-          mask-image:url("https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/qiita.svg");
+.si.qiita {
+    -webkit-mask-image:url("https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/qiita.svg");
+            mask-image:url("https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/qiita.svg");
 }
 .si.x{
-  -webkit-mask-image:url("https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/x.svg");
-          mask-image:url("https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/x.svg");
+    -webkit-mask-image:url("https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/x.svg");
+            mask-image:url("https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/x.svg");
 }
+
+#articles ul { list-style: none; 
+    padding: 0; 
+    margin: 0 
+}
+#articles li {
+    display: flex; 
+    align-items: baseline; 
+    gap:10px;
+    padding: 12px 0; 
+    border-bottom:1px solid rgba(255,255,255,.06);
+}
+#articles li:last-child {
+    border-bottom: none;
+}
+#articles a {
+    text-decoration: none;
+}
+#articles a:hover {
+    text-decoration: underline;
+}
+#articles .date {
+    font-size: 12px; 
+    opacity: .75; 
+    white-space: nowrap;
+}
+#articles .more {
+    margin-top: 14px; 
+    display: inline-block; 
+    font-size: 14px;
+    padding: 6px 12px;
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    color: var(--accent);
+    font-size: 14px;
+    transition: all 0.2s;
+}
+#articles .more:hover {
+    background: var(--accent);
+    color: #0b0f22;
+    text-decoration: none;
+}
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    border-left: 4px solid var(--accent);
+    padding-left: 8px;
+}
+#about {
+    background: var(--card);
+    padding: 18px;
+    border-radius: var(--radius);
+    border: 1px solid var(--muted);
+    line-height: 1.8;
+}
+#about strong { 
+    color: var(--accent); 
+}
+#about u { 
+    text-decoration-color: var(--accent); 
+}
+section {
+    margin: 32px 0;
+}
+section h2 {
+    font-size: clamp(18px, 2.4vw, 24px);
+    margin: 0 0 14px;
+    padding-left: 10px;
+    border-left: 4px solid var(--accent);
+}
+.projects .tag {
+    display: inline-block;
+    background: rgba(255,255,255,.08);
+    border-radius: 12px;
+    padding: 2px 8px;
+    margin: 4px 4px 0 0;
+    font-size: 13px;
+}
+
+/* ========== 1) タイポグラフィ & ベース余白 ========== */
+:root{
+    /* 既存の --text / --accent / --card / --muted を流用 */
+    --leading: 1.75;
+    --max: 960px;            /* ほんの少し広げる */
+    --radius: 16px;          /* 角まる統一 */
+    --shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+
+html, body { 
+    -webkit-font-smoothing: antialiased; 
+    text-rendering: optimizeLegibility; 
+}
+.wrap { max-width: var(--max); margin: auto; padding: 24px; }
+section { margin: 36px 0; }
+
+/* 本文の可読性（余白 & 行間） */
+p, li { line-height: var(--leading); font-size: 15.5px; }
+
+/* ========== 2) 見出しの一貫性 ========== */
+h1 { font-size: clamp(24px, 3.2vw, 36px); margin: 0 0 10px; }
+h2 {
+    font-size: clamp(18px, 2.4vw, 24px);
+    margin: 0 0 14px;
+    padding-left: 10px;
+    border-left: 4px solid var(--accent);
+}
+
+/* ========== 3) カード（About / Skills / Projects / Articles 等） ========== */
+.card, section.card {
+    background: var(--card);
+    border: 1px solid var(--muted);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 18px;
+}
+
+/* プロジェクトのグリッドを気持ち広めに */
+.projects { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); }
+.card h3 { margin: .2em 0 .4em; }
+
+/* ========== 4) ナビ & リンクの視認性 ========== */
+nav a {
+    padding: 8px 12px;
+    border: 1px solid var(--muted);
+    border-radius: 999px;
+    background: #14182b;
+}
+a { text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 2px; }
+
+/* ========== 5) Contact アイコン（色統一・ホバー演出） ========== */
+.contact-icons { display: flex; gap: 12px; align-items: center; }
+.contact-icons a { color: #fff; display: inline-block; }
+.contact-icons a:hover { color: var(--accent); }
+.si {
+    display:inline-block; width:28px; height:28px;
+    background-color: currentColor;        /* ← 文字色に追従：白→ホバーでアクセント */
+    transition: color .2s, transform .2s;
+    -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat;
+    -webkit-mask-position:center;  mask-position:center;
+    -webkit-mask-size:contain;     mask-size:contain;
+}
+.si:hover { transform: scale(1.2); }
+
+/* ========== 6) Articles（Qiita）リストの整形 ========== */
+#articles ul{ list-style:none; padding:0; margin:0; }
+#articles li{
+    display:flex; align-items:baseline; gap:10px;
+    padding:8px 0; border-bottom:1px solid rgba(255,255,255,.06);
+}
+#articles li:last-child{ border-bottom:none; }
+#articles .date{ font-size:12px; opacity:.75; white-space:nowrap; }
+#articles .more{ margin-top:10px; display:inline-block; font-size:14px; }
+
+/* ========== 7) ボタン風リンク（必要なら .btn に適用） ========== */
+.btn {
+    display:inline-flex; align-items:center; gap:8px;
+    padding:10px 14px; border-radius:12px;
+    border:1px solid var(--muted); background:#14182b; color: var(--text);
+    transition: transform .15s, background-color .2s, border-color .2s;
+}
+.btn:hover { transform: translateY(-1px); border-color: var(--accent); }
+.btn.primary { background: var(--accent); color:#0b0f22; border-color:#667dff; }
+
+/* ========== 8) レスポンシブ微調整 ========== */
+@media (max-width: 768px) {
+    .wrap { padding: 18px; }
+    .projects { grid-template-columns: 1fr; }
+    .si { width:26px; height:26px; }
+    section { margin: 28px 0; }
+}
+
+/* ========== 9) アニメーション控えめ設定（アクセシビリティ） ========== */
+@media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+}
+
+/* 1) スクロール時に見出しが隠れない＆スムース */
+html { scroll-behavior: smooth; }
+:target { scroll-margin-top: 80px; } /* ナビで飛んだ先の余白 */
+
+/* 2) ヒーロー下の余白を広げて見出しを際立たせる */
+#about { margin-top: 20px; }          /* 必要なら微調整 */
+#about p { font-size: 15.5px; color: var(--sub); }
+
+/* 3) ナビの見た目を少し整える（高さ・フォーカスリング） */
+nav a { line-height: 1; }
+nav a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  text-decoration: none;
+}
+
+/* 4) Skillsアイコン行の間隔を整える（Devicon使ってる場合） */
+#skills .devicon,
+#skills i { font-size: 40px; margin-right: 10px; vertical-align: middle; }
+
+/* 5) 小画面での読みやすさ（余白と見出し間隔） */
+@media (max-width: 768px) {
+    h1 { font-size: 24px; }
+    h2 { margin-bottom: 10px; }
+    #about, #skills, #projects, #articles { padding: 16px; }
+}
+
+/* 6) ダーク背景での文字コントラストを少しだけ上げる */
+p, li { color: rgba(232,236,255,.9); }
+
